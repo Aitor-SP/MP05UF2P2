@@ -20,6 +20,6 @@ public class Enunciat {
        perquè es pugui veure el codi antic i el codi nou.
 
     5. Adapta els jocs de proves perquè comprovin que els canvis que has fet són correctes, pensa que en canviar
-       l'estructura interna de la taula de hash, hi haurà part dels jocs de proves que hauran deixat de funcionar..
+       l'estructura interna de la taula de hash, hi haurà part dels jocs de proves que hauran deixat de funcionar
 */
 }
