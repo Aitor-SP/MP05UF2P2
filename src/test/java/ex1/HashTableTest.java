@@ -52,8 +52,10 @@ class HashTableTest {
     void get(String key, String value) {
         HashTable hashTable = new HashTable();
         hashTable.put(key,value);
+        hashTable.put("key","value");
         Assertions.assertEquals(value, hashTable.get(key));
-        System.out.println(hashTable.get(key).toString());
+        System.out.println(hashTable.toString());
+        System.out.println("VALUE -> "+hashTable.get(key));
     }
 
     @ParameterizedTest

@@ -83,17 +83,21 @@ public class HashTable {
      * @return El propi element que es busca (null si no s'ha trobat).
      */
     //PRUEBA
-    //ERROR 3 -> CAPTURAR EL ERROR CUANDO LA KEY ES NULL
+    //ERROR 3 -> Daba NullPointerException al tener temp.next
     public String get(String key) {
         int hash = getHash(key);
         try {
             if(entries[hash] != null) {
                 HashEntry temp = entries[hash];
-
-                while( !temp.key.equals(key))
+                //Mientras la key.temp no sea igual a la key y temp.next no sea null
+                while(!temp.key.equals(key) && temp.next != null)
                     temp = temp.next;
-
-                return temp.value;
+                //Si la key.temp es igual a la key
+                if(temp.key.equals(key))
+                    //Retorna el valor de temp
+                    return temp.value;
+                //Si no, retorna null
+                else return null;
             }
         } catch (NullPointerException e) {
             System.out.print("SE NECESITA UNA KEY");
